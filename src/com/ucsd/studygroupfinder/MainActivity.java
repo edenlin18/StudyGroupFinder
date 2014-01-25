@@ -35,4 +35,10 @@ public class MainActivity extends Activity {
     	startActivity(i);
     }
     
+    public void editGroupTest(View view)
+    {
+    	Intent i = new Intent(this, EditGroupActivity.class);
+    	startActivity(i);
+    }
+    
 }
