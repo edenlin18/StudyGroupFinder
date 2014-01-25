@@ -9,6 +9,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -42,6 +43,7 @@ public class EditGroupActivity extends Activity {
 			public void onClick(View v) {
 				Calendar dtTxt = null;
 				String preExistingDate = (String) txtView.getText().toString();
+				Log.d("Check date", preExistingDate);
 
 				if (preExistingDate != null && !preExistingDate.equals("")) {
 					StringTokenizer st = new StringTokenizer(preExistingDate,
@@ -49,24 +51,26 @@ public class EditGroupActivity extends Activity {
 					initialMonth = st.nextToken();
 					initialDate = st.nextToken();
 					initialYear = st.nextToken();
+
 					if (dialog == null)
 						dialog = new DatePickerDialog(v.getContext(),
 								new PickDate(), Integer.parseInt(initialYear),
-								Integer.parseInt(initialMonth) - 1, Integer
-										.parseInt(initialDate));
+								Integer.parseInt(initialMonth)-1, Integer.parseInt(initialDate));
 					dialog.updateDate(Integer.parseInt(initialYear),
-							Integer.parseInt(initialMonth) - 1,
+							Integer.parseInt(initialMonth)-1,
 							Integer.parseInt(initialDate));
 
 				} else {
 					dtTxt = Calendar.getInstance();
+					dtTxt.setTimeInMillis(System.currentTimeMillis());
 					if (dialog == null)
+					{
 						dialog = new DatePickerDialog(v.getContext(),
-								new PickDate(), dtTxt.getTime().getYear(),
-								dtTxt.getTime().getMonth(), dtTxt.getTime()
-										.getDay());
-					dialog.updateDate(dtTxt.getTime().getYear(), dtTxt
-							.getTime().getMonth(), dtTxt.getTime().getDay());
+								new PickDate(), dtTxt.get(Calendar.YEAR),
+								dtTxt.get(Calendar.MONTH), dtTxt.get(Calendar.DAY_OF_MONTH));
+					}
+						dialog.updateDate(dtTxt.get(Calendar.YEAR), dtTxt.get(Calendar.MONTH), 
+							dtTxt.get(Calendar.DAY_OF_MONTH));
 				}
 
 				dialog.show();
@@ -109,7 +113,7 @@ public class EditGroupActivity extends Activity {
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
 				int dayOfMonth) {
 			view.updateDate(year, monthOfYear, dayOfMonth);
-			txtView.setText(monthOfYear + "/" + dayOfMonth + "/" + year);
+			txtView.setText(monthOfYear + 1 + "/" + dayOfMonth + "/" + year);
 			dialog.hide();
 		}
 
