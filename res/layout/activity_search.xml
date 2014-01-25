@@ -8,7 +8,7 @@
                                  android:gravity="center">
                              
                              <TextView
-                                 android:id="@+id/status"
+                                 android:id="@+id/SEARCHschool"
                                  android:layout_width="wrap_content"
                                  android:layout_gravity="center"
                                  android:layout_span="2"
@@ -27,13 +27,13 @@
                              android:clickable="true"
                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:id="@+id/group" 
+                             android:id="@+id/SEARCHgroup" 
                              android:layout_marginLeft="20dip"
                              android:onClick="myGroupsOnClick">   
                              </Button>  
                              
                              <Button
-                             android:text="@string/logout"
+                             android:text="@string/SEARCHlogout"
                              android:textSize="12sp"
                              android:clickable="true"
                             android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
                              
                    
                            <EditText
-                               android:id="@+id/searchfield"
+                               android:id="@+id/SEARCHsearchfield"
                                android:layout_height="wrap_content"
                                android:layout_marginLeft="20dip"
                                android:layout_marginRight="20dip"
@@ -62,7 +62,7 @@
                              android:textSize="12sp"
                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:id="@+id/search" 
+                             android:id="@+id/SEARCHsearch" 
                              android:onClick="mySearchOnClick">   
                              </Button>                            
                          </TableRow>
