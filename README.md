@@ -10,4 +10,4 @@ sup yo
 
 fug this shit
 
-Please commit!
+Please let me commit!
