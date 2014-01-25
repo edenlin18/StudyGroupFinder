@@ -54,4 +54,14 @@
         android:onClick="connectTest"
         android:text="Connect Test" />
 
+    <Button
+        android:id="@+id/MAINbutton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MAINbutton4"
+        android:layout_below="@+id/MAINbutton4"
+        android:layout_marginTop="23dp"
+        android:text="Search Results Test" 
+        android:onClick="searchResultsTest" />
+
 </RelativeLayout>

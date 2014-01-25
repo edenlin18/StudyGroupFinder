@@ -11,5 +11,6 @@
     <string name="search">Search</string>
     <string name="title_activity_edit_group">EditGroupActivity</string>
     <string name="create_or_edit">Please Create Or Edit Your Group Here</string>
+    <string name="title_activity_search_results">SearchResultsActivity</string>
 
 </resources>

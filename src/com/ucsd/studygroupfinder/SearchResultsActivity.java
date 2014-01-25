@@ -11,10 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
-public class MyGroupsActivity extends ListActivity 
+public class SearchResultsActivity extends ListActivity 
 {
 	private List<String> list;
 	
@@ -47,11 +45,14 @@ public class MyGroupsActivity extends ListActivity
 	   list.add("2");
 	   list.add("3");
 	   
-	   setListAdapter(new Adapter(MyGroupsActivity.this, R.layout.search_results_row, list));
+	   setListAdapter(new Adapter(SearchResultsActivity.this, R.layout.search_results_row, list));
 	}
 	
 	public void editResult(View view)
 	{
+		// Color Feedback, weird stuff happening
+		//view.setBackgroundResource(android.R.drawable.list_selector_background);
+		
 		Intent i = new Intent(this, EditGroupActivity.class);
 		startActivity(i);
 	}

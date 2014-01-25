@@ -53,6 +53,13 @@ public class MainActivity extends Activity {
     	startActivity(i);
     }
     
+    public void searchResultsTest(View view)
+    {
+    	Intent i = new Intent(this, SearchResultsActivity.class);
+    	startActivity(i);
+    }
+    
+    
     public void connectTest(View view)
     {
         client = new ClientThread("id", "password", "school");
@@ -79,7 +86,7 @@ public class MainActivity extends Activity {
     	{
 			try
 			{
-				socket = new Socket("10.55.51.206", 2222);
+				socket = new Socket("10.55.51.114", 2222);
 				out = new PrintWriter(socket.getOutputStream(),true);
 				in = new BufferedReader(
 						new InputStreamReader(socket.getInputStream()));

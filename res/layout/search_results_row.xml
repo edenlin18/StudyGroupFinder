@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingTop="5dp"
+	android:paddingBottom="5dp"
+	android:onClick="editResult"
+	android:background="@android:drawable/list_selector_background"
+	>
+
+	<TextView
+	    android:id="@+id/RESULTsubject"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:text="SUBJECT"
+	    android:textSize="30dp" />
+
+	<TextView
+	    android:id="@+id/RESULTisCreator"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:textColor="#999999"
+	    android:text="Creator" />
+
+	<TextView
+	    android:id="@+id/RESULTdate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/RESULTsubject"
+	    android:text="Some date goes here" />
+
+	<TextView
+	    android:id="@+id/RESULTcount"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:text="# 47532" />
+	
+</RelativeLayout>

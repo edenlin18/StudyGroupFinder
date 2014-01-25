@@ -34,6 +34,10 @@
             android:name="com.ucsd.studygroupfinder.EditGroupActivity"
             android:label="@string/title_activity_edit_group" >
         </activity>
+        <activity
+            android:name="com.ucsd.studygroupfinder.SearchResultsActivity"
+            android:label="@string/title_activity_search_results" >
+        </activity>
     </application>
 
 </manifest>

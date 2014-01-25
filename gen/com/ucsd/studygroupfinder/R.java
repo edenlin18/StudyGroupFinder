@@ -50,31 +50,39 @@ public final class R {
         public static final int MAINbutton2=0x7f080019;
         public static final int MAINbutton3=0x7f080018;
         public static final int MAINbutton4=0x7f08001a;
+        public static final int MAINbutton5=0x7f08001b;
         public static final int MAINtextView1=0x7f080016;
+        public static final int MYGROUPlistView1=0x7f08001c;
+        public static final int RESULTSlistView1=0x7f080022;
+        public static final int RESULTcount=0x7f080029;
+        public static final int RESULTdate=0x7f080028;
+        public static final int RESULTisCreator=0x7f080027;
+        public static final int RESULTsubject=0x7f080026;
         public static final int SEARCHgroup=0x7f08001e;
         public static final int SEARCHlogout=0x7f08001f;
         public static final int SEARCHschool=0x7f08001d;
         public static final int SEARCHsearch=0x7f080021;
         public static final int SEARCHsearchfield=0x7f080020;
-        public static final int action_settings=0x7f080025;
-        public static final int button1=0x7f08001c;
-        public static final int line1=0x7f080024;
-        public static final int tableLayout=0x7f08001b;
-        public static final int textView1=0x7f080022;
-        public static final int textView2=0x7f080023;
+        public static final int action_settings=0x7f08002a;
+        public static final int line1=0x7f080025;
+        public static final int textView1=0x7f080023;
+        public static final int textView2=0x7f080024;
     }
     public static final class layout {
         public static final int activity_edit_group=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_my_groups=0x7f030002;
         public static final int activity_search=0x7f030003;
-        public static final int my_groups_row=0x7f030004;
+        public static final int activity_search_results=0x7f030004;
+        public static final int my_groups_row=0x7f030005;
+        public static final int search_results_row=0x7f030006;
     }
     public static final class menu {
         public static final int edit_group=0x7f070000;
         public static final int main=0x7f070001;
         public static final int my_groups=0x7f070002;
         public static final int search=0x7f070003;
+        public static final int search_results=0x7f070004;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -87,6 +95,7 @@ public final class R {
         public static final int title_activity_edit_group=0x7f050008;
         public static final int title_activity_my_groups=0x7f050003;
         public static final int title_activity_search=0x7f050004;
+        public static final int title_activity_search_results=0x7f05000a;
     }
     public static final class style {
         /** 
