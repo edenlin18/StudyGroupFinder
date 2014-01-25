@@ -28,7 +28,8 @@
                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:id="@+id/group" 
-                             android:layout_marginLeft="20dip">   
+                             android:layout_marginLeft="20dip"   
+                             android:onClick="myGroupsOnClick">
                              </Button>  
                              
                              <Button

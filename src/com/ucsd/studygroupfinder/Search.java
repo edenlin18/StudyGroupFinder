@@ -32,18 +32,13 @@ public class Search extends Activity {
 		searchButton = (Button) findViewById(R.id.search);
 		groupButton = (Button) findViewById(R.id.group);
 		logoutButton = (Button) findViewById(R.id.logout);
-		
-		groupButton.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View view) {
-				Intent i = new Intent(this, MyGroupsActivity.class);
-				startActivity(i);
-			}
-			
-		});
-		
-		
 	}
 
+	public void myGroupsOnClick(View view)
+	{
+		Intent i = new Intent(this, MyGroupsActivity.class);
+		startActivity(i);
+		
+	}
 }
+	
