@@ -31,8 +31,8 @@ public class EditGroupActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_group);
-		txtView = (EditText) findViewById(R.id.editText4);
-		txtView2 = (EditText) findViewById(R.id.editText5);
+		txtView = (EditText) findViewById(R.id.EDITeditText4);
+		txtView2 = (EditText) findViewById(R.id.EDITeditText5);
 
 		context = getApplicationContext();
 

@@ -5,13 +5,13 @@
     tools:context=".EditGroupActivity" >
 
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/EDITtableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     </TableRow>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/EDITtextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_or_edit"
@@ -20,12 +20,12 @@
         android:textSize="@dimen/activity_horizontal_margin" />
 
     <TableRow
-        android:id="@+id/tableRow2"
+        android:id="@+id/EDITtableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/EDITtextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Group Name"
@@ -33,12 +33,12 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow3"
+        android:id="@+id/EDITtableRow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/EDITeditText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10" >
@@ -48,12 +48,12 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow4"
+        android:id="@+id/EDITtableRow4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/EDITtextView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Subject"
@@ -61,24 +61,24 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow5"
+        android:id="@+id/EDITtableRow5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/EDITeditText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10" />
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow6"
+        android:id="@+id/EDITtableRow6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/EDITtextView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
@@ -86,24 +86,24 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow7"
+        android:id="@+id/EDITtableRow7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/EDITeditText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10" />
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow8"
+        android:id="@+id/EDITtableRow8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/EDITtextView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start Date"
@@ -111,12 +111,12 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow9"
+        android:id="@+id/EDITtableRow9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/EDITeditText4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -124,12 +124,12 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow10"
+        android:id="@+id/EDITtableRow10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/EDITtextView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start Time"
@@ -137,12 +137,12 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow11"
+        android:id="@+id/EDITtableRow11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/EDITeditText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
