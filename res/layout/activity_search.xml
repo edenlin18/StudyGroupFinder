@@ -28,8 +28,8 @@
                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:id="@+id/group" 
-                             android:layout_marginLeft="20dip"   
-                             android:onClick="myGroupsOnClick">
+                             android:layout_marginLeft="20dip"
+                             android:onClick="myGroupsOnClick">   
                              </Button>  
                              
                              <Button
@@ -62,7 +62,8 @@
                              android:textSize="12sp"
                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
-                             android:id="@+id/search" >   
+                             android:id="@+id/search" 
+                             android:onClick="mySearchOnClick">   
                              </Button>                            
                          </TableRow>
 
