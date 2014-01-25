@@ -34,9 +34,9 @@ public class Search extends Activity {
 	}
 	
 	public void addListenerOnButton() {
-		searchButton = (Button) findViewById(R.id.search);
-		groupButton = (Button) findViewById(R.id.group);
-		logoutButton = (Button) findViewById(R.id.logout);
+		searchButton = (Button) findViewById(R.id.SEARCHsearch);
+		groupButton = (Button) findViewById(R.id.SEARCHgroup);
+		logoutButton = (Button) findViewById(R.id.SEARCHlogout);
 	}
 
 	public void myGroupsOnClick(View view)
@@ -48,7 +48,7 @@ public class Search extends Activity {
 	
 	public void mySearchOnClick(View view)
 	{
-		sEdit = (EditText)findViewById(R.id.searchfield);
+		sEdit = (EditText)findViewById(R.id.SEARCHsearchfield);
 		String input = sEdit.getText().toString();
 		
 		Intent i = new Intent(this, MyGroupsActivity.class);
