@@ -9,38 +9,49 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/MAINtextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/MAINbutton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MAINtextView1"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
-        android:text="My Groups Test"
-        android:onClick="myGroupsTest" />
+        android:layout_marginBottom="45dp"
+        android:onClick="myGroupsTest"
+        android:text="My Groups Test" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/MAINbutton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:text="Search Test"
-        android:onClick="searchTest" />
+        android:layout_above="@+id/MAINbutton1"
+        android:layout_alignLeft="@+id/MAINbutton1"
+        android:layout_marginBottom="17dp"
+        android:onClick="editGroupTest"
+        android:text="Edit Group Test" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/MAINbutton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp"
-        android:text="Edit Group Test"
-        android:onClick="editGroupTest" />
+        android:layout_above="@+id/MAINbutton3"
+        android:layout_alignLeft="@+id/MAINbutton3"
+        android:layout_marginBottom="14dp"
+        android:onClick="searchTest"
+        android:text="Search Test" />
+
+    <Button
+        android:id="@+id/MAINbutton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MAINtextView1"
+        android:layout_below="@+id/MAINtextView1"
+        android:layout_marginTop="30dp"
+        android:onClick="connectTest"
+        android:text="Connect Test" />
 
 </RelativeLayout>
