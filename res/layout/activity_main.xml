@@ -23,4 +23,14 @@
         android:text="My Groups Test"
         android:onClick="myGroupsTest" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="Search Test"
+        android:onClick="searchTest" />
+
 </RelativeLayout>

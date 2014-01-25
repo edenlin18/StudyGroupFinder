@@ -29,4 +29,10 @@ public class MainActivity extends Activity {
 
     }
     
+    public void searchTest(View view)
+    {
+    	Intent i = new Intent(this, Search.class);
+    	startActivity(i);
+    }
+    
 }
