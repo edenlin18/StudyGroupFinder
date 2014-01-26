@@ -1,6 +1,8 @@
 package com.ucsd.studygroupfinder;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.StringTokenizer;
 import com.ucsd.studygroupfinder.R;
 import android.os.Bundle;
@@ -11,15 +13,19 @@ import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class EditGroupActivity extends Activity {
-	private EditText edTxt = null;
-	private TimePickerDialog timePickDialog = null;
 
+	private TimePickerDialog timePickDialog = null;
+	private Spinner spinner;
 	private EditText txtView, txtView2;
 	private String initialDate;
 	private String initialMonth;
@@ -32,11 +38,12 @@ public class EditGroupActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_group);
-		txtView = (EditText) findViewById(R.id.EDITeditText4);
-		txtView2 = (EditText) findViewById(R.id.EDITeditText5);
 
+	}
+
+	public void StartDate(View v) {
 		context = getApplicationContext();
-
+		txtView = (EditText) findViewById(R.id.StartDateInput);
 		txtView.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -55,54 +62,29 @@ public class EditGroupActivity extends Activity {
 					if (dialog == null)
 						dialog = new DatePickerDialog(v.getContext(),
 								new PickDate(), Integer.parseInt(initialYear),
-								Integer.parseInt(initialMonth)-1, Integer.parseInt(initialDate));
+								Integer.parseInt(initialMonth) - 1, Integer
+										.parseInt(initialDate));
 					dialog.updateDate(Integer.parseInt(initialYear),
-							Integer.parseInt(initialMonth)-1,
+							Integer.parseInt(initialMonth) - 1,
 							Integer.parseInt(initialDate));
 
 				} else {
 					dtTxt = Calendar.getInstance();
 					dtTxt.setTimeInMillis(System.currentTimeMillis());
-					if (dialog == null)
-					{
+					if (dialog == null) {
 						dialog = new DatePickerDialog(v.getContext(),
-								new PickDate(), dtTxt.get(Calendar.YEAR),
-								dtTxt.get(Calendar.MONTH), dtTxt.get(Calendar.DAY_OF_MONTH));
+								new PickDate(), dtTxt.get(Calendar.YEAR), dtTxt
+										.get(Calendar.MONTH), dtTxt
+										.get(Calendar.DAY_OF_MONTH));
 					}
-						dialog.updateDate(dtTxt.get(Calendar.YEAR), dtTxt.get(Calendar.MONTH), 
+					dialog.updateDate(dtTxt.get(Calendar.YEAR),
+							dtTxt.get(Calendar.MONTH),
 							dtTxt.get(Calendar.DAY_OF_MONTH));
 				}
 
 				dialog.show();
 			}
 
-		});
-
-		txtView2.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				String time = txtView2.getText().toString();
-
-				if (time != null && !time.equals("")) {
-					StringTokenizer st = new StringTokenizer(time, ":");
-					String timeHour = st.nextToken();
-					String timeMinute = st.nextToken();
-
-					try
-					{
-						timePickDialog = new TimePickerDialog(v.getContext(),
-								new TimePickHandler(), Integer.parseInt(timeHour), 
-								Integer.parseInt(timeMinute), true);			
-					} catch(NumberFormatException e){}
-
-				} else {
-					timePickDialog = new TimePickerDialog(v.getContext(),
-							new TimePickHandler(), 10, 45, true);
-				}
-
-				timePickDialog.show();
-			}
 		});
 
 	}
@@ -117,6 +99,38 @@ public class EditGroupActivity extends Activity {
 			dialog.hide();
 		}
 
+	}
+
+	public void StartTime(View v) {
+		context = getApplicationContext();
+		txtView2 = (EditText) findViewById(R.id.StartTimeInput);
+		txtView2.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String time = txtView2.getText().toString();
+
+				if (time != null && !time.equals("")) {
+					StringTokenizer st = new StringTokenizer(time, ":");
+					String timeHour = st.nextToken();
+					String timeMinute = st.nextToken();
+
+					try {
+						timePickDialog = new TimePickerDialog(v.getContext(),
+								new TimePickHandler(), Integer
+										.parseInt(timeHour), Integer
+										.parseInt(timeMinute), false);
+					} catch (NumberFormatException e) {
+					}
+
+				} else {
+					timePickDialog = new TimePickerDialog(v.getContext(),
+							new TimePickHandler(), 10, 45, false);
+				}
+
+				timePickDialog.show();
+			}
+		});
 	}
 
 	private class TimePickHandler implements OnTimeSetListener {
@@ -138,9 +152,60 @@ public class EditGroupActivity extends Activity {
 			String strHrsToShow = (datetime.get(Calendar.HOUR) == 0) ? "12"
 					: datetime.get(Calendar.HOUR) + "";
 
-			txtView2.setText(strHrsToShow + ":" + minute + am_pm);
+			txtView2.setText(strHrsToShow + ":" + minute + "  " + am_pm);
 			timePickDialog.hide();
 
+		}
+
+	}
+	
+	
+	public void confirm( View v )
+	{
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	public void addItemsOnSpinner() {
+
+		spinner = (Spinner) findViewById(R.id.SchoolInput);
+		List<String> list = new ArrayList<String>();
+		list.add("list 1");
+		list.add("list 2");
+		list.add("list 3");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_spinner_item, list);
+		dataAdapter
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner.setAdapter(dataAdapter);
+	}
+
+	public void addListenerOnSpinnerItemSelection() {
+		spinner = (Spinner) findViewById(R.id.SchoolInput);
+		spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+	}
+
+	public class CustomOnItemSelectedListener implements OnItemSelectedListener {
+
+		public void onItemSelected(AdapterView<?> parent, View view, int pos,
+				long id) {
+			Toast.makeText(
+					parent.getContext(),
+					"OnItemSelectedListener : "
+							+ parent.getItemAtPosition(pos).toString(),
+					Toast.LENGTH_SHORT).show();
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> arg0) {
+			// TODO Auto-generated method stub
 		}
 
 	}

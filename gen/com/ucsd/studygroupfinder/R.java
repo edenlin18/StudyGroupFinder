@@ -8,6 +8,9 @@
 package com.ucsd.studygroupfinder;
 
 public final class R {
+    public static final class array {
+        public static final int school_arrays=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -24,48 +27,58 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int EDITeditText1=0x7f080005;
-        public static final int EDITeditText2=0x7f080009;
-        public static final int EDITeditText3=0x7f08000d;
-        public static final int EDITeditText4=0x7f080011;
-        public static final int EDITeditText5=0x7f080015;
-        public static final int EDITtableRow1=0x7f080000;
-        public static final int EDITtableRow10=0x7f080012;
-        public static final int EDITtableRow11=0x7f080014;
-        public static final int EDITtableRow2=0x7f080002;
-        public static final int EDITtableRow3=0x7f080004;
-        public static final int EDITtableRow4=0x7f080006;
-        public static final int EDITtableRow5=0x7f080008;
-        public static final int EDITtableRow6=0x7f08000a;
-        public static final int EDITtableRow7=0x7f08000c;
-        public static final int EDITtableRow8=0x7f08000e;
-        public static final int EDITtableRow9=0x7f080010;
-        public static final int EDITtextView1=0x7f080001;
-        public static final int EDITtextView2=0x7f080003;
-        public static final int EDITtextView3=0x7f080007;
-        public static final int EDITtextView4=0x7f08000b;
-        public static final int EDITtextView5=0x7f08000f;
-        public static final int EDITtextView6=0x7f080013;
-        public static final int MAINbutton1=0x7f080017;
-        public static final int MAINbutton2=0x7f080019;
-        public static final int MAINbutton3=0x7f080018;
-        public static final int MAINbutton4=0x7f08001a;
-        public static final int MAINbutton5=0x7f08001b;
-        public static final int MAINtextView1=0x7f080016;
-        public static final int MYGROUPlistView1=0x7f08001c;
-        public static final int RESULTSlistView1=0x7f080021;
-        public static final int RESULTcount=0x7f080028;
-        public static final int RESULTdate=0x7f080027;
-        public static final int RESULTisCreator=0x7f080026;
-        public static final int RESULTsubject=0x7f080025;
-        public static final int SEARCHgroup=0x7f08001d;
-        public static final int SEARCHlogout=0x7f08001e;
-        public static final int SEARCHsearch=0x7f080020;
-        public static final int SEARCHsearchfield=0x7f08001f;
-        public static final int action_settings=0x7f080029;
-        public static final int line1=0x7f080024;
-        public static final int textView1=0x7f080022;
-        public static final int textView2=0x7f080023;
+        public static final int AddressInput=0x7f090011;
+        public static final int AskAddress=0x7f09000f;
+        public static final int AskDescription=0x7f090013;
+        public static final int AskGroupName=0x7f090003;
+        public static final int AskSchool=0x7f090007;
+        public static final int AskStartDate=0x7f090017;
+        public static final int AskStartTime=0x7f09001b;
+        public static final int AskSubject=0x7f09000b;
+        public static final int Button01=0x7f09001f;
+        public static final int DescriptionInput=0x7f090015;
+        public static final int EditTableRow1=0x7f090000;
+        public static final int EditTableRow10=0x7f090012;
+        public static final int EditTableRow11=0x7f090014;
+        public static final int EditTableRow12=0x7f090016;
+        public static final int EditTableRow13=0x7f090018;
+        public static final int EditTableRow14=0x7f09001a;
+        public static final int EditTableRow15=0x7f09001c;
+        public static final int EditTableRow16=0x7f09001e;
+        public static final int EditTableRow2=0x7f090002;
+        public static final int EditTableRow3=0x7f090004;
+        public static final int EditTableRow4=0x7f090006;
+        public static final int EditTableRow5=0x7f090008;
+        public static final int EditTableRow6=0x7f09000a;
+        public static final int EditTableRow7=0x7f09000c;
+        public static final int EditTableRow8=0x7f09000e;
+        public static final int EditTableRow9=0x7f090010;
+        public static final int Greeting=0x7f090001;
+        public static final int GroupNameInput=0x7f090005;
+        public static final int MAINbutton1=0x7f090021;
+        public static final int MAINbutton2=0x7f090023;
+        public static final int MAINbutton3=0x7f090022;
+        public static final int MAINbutton4=0x7f090024;
+        public static final int MAINbutton5=0x7f090025;
+        public static final int MAINtextView1=0x7f090020;
+        public static final int MYGROUPlistView1=0x7f090026;
+        public static final int RESULTSlistView1=0x7f09002b;
+        public static final int RESULTcount=0x7f090032;
+        public static final int RESULTdate=0x7f090031;
+        public static final int RESULTisCreator=0x7f090030;
+        public static final int RESULTsubject=0x7f09002f;
+        public static final int SEARCHgroup=0x7f090027;
+        public static final int SEARCHlogout=0x7f090028;
+        public static final int SEARCHsearch=0x7f09002a;
+        public static final int SEARCHsearchfield=0x7f090029;
+        public static final int SchoolInput=0x7f090009;
+        public static final int StartDateInput=0x7f090019;
+        public static final int StartTimeInput=0x7f09001d;
+        public static final int SubjectInput=0x7f09000d;
+        public static final int action_settings=0x7f090033;
+        public static final int line1=0x7f09002e;
+        public static final int textView1=0x7f09002c;
+        public static final int textView2=0x7f09002d;
     }
     public static final class layout {
         public static final int activity_edit_group=0x7f030000;
@@ -77,20 +90,34 @@ public final class R {
         public static final int search_results_row=0x7f030006;
     }
     public static final class menu {
-        public static final int edit_group=0x7f070000;
-        public static final int main=0x7f070001;
-        public static final int my_groups=0x7f070002;
-        public static final int search=0x7f070003;
-        public static final int search_results=0x7f070004;
+        public static final int edit_group=0x7f080000;
+        public static final int main=0x7f080001;
+        public static final int my_groups=0x7f080002;
+        public static final int search=0x7f080003;
+        public static final int search_results=0x7f080004;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
+        public static final int address=0x7f050016;
         public static final int app_name=0x7f050000;
+        public static final int choose_a_school=0x7f050017;
+        public static final int connect_test=0x7f05000d;
         public static final int create_or_edit=0x7f050009;
+        public static final int description=0x7f05000e;
+        public static final int edit_confirm=0x7f050018;
+        public static final int edit_group_test=0x7f05000f;
+        public static final int group_name=0x7f050010;
         public static final int hello_world=0x7f050002;
         public static final int logout=0x7f050006;
         public static final int my_group=0x7f050005;
+        public static final int my_groups_test=0x7f05000c;
+        public static final int school=0x7f050015;
         public static final int search=0x7f050007;
+        public static final int search_results_test=0x7f050011;
+        public static final int search_test=0x7f050012;
+        public static final int start_date=0x7f05000b;
+        public static final int start_time=0x7f050013;
+        public static final int subject=0x7f050014;
         public static final int title_activity_edit_group=0x7f050008;
         public static final int title_activity_my_groups=0x7f050003;
         public static final int title_activity_search=0x7f050004;
@@ -118,10 +145,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
