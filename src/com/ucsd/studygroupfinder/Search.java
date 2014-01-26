@@ -54,7 +54,7 @@ public class Search extends Activity {
 	public void mySearchOnClick(View view) {
 		sEdit = (EditText) findViewById(R.id.SEARCHsearchfield);
 
-		String input = sEdit.getText().toString();
+		String input = sEdit.getText().toString().toUpperCase();
 
 		Intent i = new Intent(this, MyGroupsActivity.class);
 
@@ -63,17 +63,9 @@ public class Search extends Activity {
 
 		input = new String(removeDuplicates(input));
 
-		for (int j = 0;; j++) {
-			if (input.contains(" ")) {
-				i.putExtra(KEYWORD + j, input.substring(0, input.indexOf(" ")));
-				Log.d("Test first", input.substring(0, input.indexOf(" ")));
-				input = new String(input.substring(1 + input.indexOf(" ")));
-			} else {
-				i.putExtra(KEYWORD + j, input);
-				Log.d("Test last", input);
-				break;
-			}
-		}
+		i.putExtra(KEYWORD, input);
+		//Log.d(KEYWORD, input);
+
 		startActivity(i);
 
 	}
