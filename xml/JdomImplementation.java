@@ -8,6 +8,6 @@ public class JdomImplementation {
     
   		// write xml to a file  
   		XMLMaker createXml = new XMLMaker();  
-  		createXml.createXml(new Group("a","a","a","a","a","a","a","a"));  
+  		createXml.createXml("cse","ucsd","gilman dr","computer science","01/26/14","2:10AM","1");  
  	}  
 }  

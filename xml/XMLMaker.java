@@ -16,34 +16,34 @@ public class XMLMaker {
 	}
 	public XMLMaker(){
 	}
- 	public boolean createXml(Group g) {  
+ 	public boolean createXml(String subject, String school, String address, String description,
+                            String date, String time, String creatorId) {  
   
-  		try {  
+  	try {  
 			Element root = new Element("group");
 			Document doc = new Document(root);
-			root.addContent(new Element("groupName").setText("" + g.getGroupName()));
-			root.addContent(new Element("school").setText(g.getSchool()));
-			root.addContent(new Element("subject").setText(g.getSubject()));
-			root.addContent(new Element("address").setText(g.getAddress()));
-			root.addContent(new Element("description").setText(g.getDescription()));
-			root.addContent(new Element("dateTime").setText("" + g.getDate() + " " + g.getTime()));
-			root.addContent(new Element("creatorID").setText("" + g.getCreatorID()));
+      root.addContent(new Element("subject").setText(subject));
+			root.addContent(new Element("school").setText(school));
+			root.addContent(new Element("address").setText(address));
+			root.addContent(new Element("description").setText(description));
+			root.addContent(new Element("dateTime").setText("" + date + " " + time));
+			root.addContent(new Element("creatorId").setText("" + creatorId));
 			
-   			// get object to see output of prepared document  
-   			XMLOutputter xmlOutput = new XMLOutputter();  
+   		// get object to see output of prepared document  
+   		XMLOutputter xmlOutput = new XMLOutputter();  
   
-   			// passsed System.out to see document content on console  
-   			xmlOutput.output(doc, System.out);  
+   		// passsed System.out to see document content on console  
+   		xmlOutput.output(doc, System.out);  
 
 /* 
  * socket output  
  * xmlOutput.output(doc, out);
  */
 
-   			// passed fileWriter to write content in specified file  
-   			xmlOutput.setFormat(Format.getPrettyFormat());  
-   			xmlOutput.output(doc, new FileWriter("generatedXml.xml")); 
-   			return true;
+   		// passed fileWriter to write content in specified file  
+   		xmlOutput.setFormat(Format.getPrettyFormat());  
+   		xmlOutput.output(doc, new FileWriter("generatedXml.xml")); 
+   		return true;
 
   		} catch (IOException io) {  
    			System.out.println(io.getMessage()); 
