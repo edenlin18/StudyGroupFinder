@@ -25,7 +25,7 @@
     <string name="school">School</string>
     <string name="address">Address</string>
     <string name="choose_a_school">Choose A School</string>
-
+    <string name="change_school">Change School</string>
     <string-array name="school_arrays">
         <item>UCSD</item>
         <item>UCLA</item>
@@ -44,5 +44,6 @@
     <string name="warning">WARNING</string>
     <string name="passwordEmpty">Password cannot be empty!</string>
     <string name="emailEmpty">Email cannot be empty!</string>
+        <string name="title_activity_sign_up">Sign Up</string>
 
 </resources>

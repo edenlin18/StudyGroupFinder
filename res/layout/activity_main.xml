@@ -21,8 +21,8 @@
         android:layout_alignLeft="@+id/MAINtextView1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="45dp"
-        android:onClick="myGroupsTest"
-        android:text="@string/my_groups_test" />
+        android:onClick="signUpTest"
+        android:text="Sign Up Test" />
 
     <Button
         android:id="@+id/MAINbutton3"
