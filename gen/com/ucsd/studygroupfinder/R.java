@@ -53,20 +53,19 @@ public final class R {
         public static final int MAINbutton5=0x7f08001b;
         public static final int MAINtextView1=0x7f080016;
         public static final int MYGROUPlistView1=0x7f08001c;
-        public static final int RESULTSlistView1=0x7f080022;
-        public static final int RESULTcount=0x7f080029;
-        public static final int RESULTdate=0x7f080028;
-        public static final int RESULTisCreator=0x7f080027;
-        public static final int RESULTsubject=0x7f080026;
-        public static final int SEARCHgroup=0x7f08001e;
-        public static final int SEARCHlogout=0x7f08001f;
-        public static final int SEARCHschool=0x7f08001d;
-        public static final int SEARCHsearch=0x7f080021;
-        public static final int SEARCHsearchfield=0x7f080020;
-        public static final int action_settings=0x7f08002a;
-        public static final int line1=0x7f080025;
-        public static final int textView1=0x7f080023;
-        public static final int textView2=0x7f080024;
+        public static final int RESULTSlistView1=0x7f080021;
+        public static final int RESULTcount=0x7f080028;
+        public static final int RESULTdate=0x7f080027;
+        public static final int RESULTisCreator=0x7f080026;
+        public static final int RESULTsubject=0x7f080025;
+        public static final int SEARCHgroup=0x7f08001d;
+        public static final int SEARCHlogout=0x7f08001e;
+        public static final int SEARCHsearch=0x7f080020;
+        public static final int SEARCHsearchfield=0x7f08001f;
+        public static final int action_settings=0x7f080029;
+        public static final int line1=0x7f080024;
+        public static final int textView1=0x7f080022;
+        public static final int textView2=0x7f080023;
     }
     public static final class layout {
         public static final int activity_edit_group=0x7f030000;
