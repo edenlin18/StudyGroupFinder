@@ -1,79 +1,122 @@
 
 
 public class Group{
-	private String groupName;
-	private String school;
+	private int id;
+	private String title;
 	private String subject;
-	private String address;
 	private String description;
-	private String date;
-	private String time;
-	private String creatorID;
+	private String address;
+	private String addressAddition;
+	private String dateTime;
+	private int duration;
+	private int peopleIn;
+	private int checkIn;
+	private String school;
+	private String creatorId;
+	private String creatorName;
 
 	public Group(){
 
 	}
 
-	public Group(String groupName, String school, String subject, String address, String description, 
-		String date, String time, String creatorID ){
-		this.groupName = groupName;
-		this.school = school;
+	public Group(int id, String title, String subject, 
+		String description, String address, String addressAddition,
+		String dateTime, int duration, int peopleIn, int checkIn, 
+		String school, String creatorId, String creatorName ) {
+		this.id = id;
+		this.title = title;
 		this.subject = subject;
-		this.address = address;
 		this.description = description;
-		this.date = date;
-		this.time = time;
-		this.creatorID = creatorID;
+		this.address = address;
+		this.addressAddition = addressAddition;
+		this.dateTime = dateTime;
+		this.duration = duration;
+		this.peopleIn = peopleIn;
+		this.checkIn = checkIn;
+		this.school = school;
+		this.creatorId = creatorId;
+		this.creatorName = creatorName;
 	}
 
-	public String getGroupName(){
-		return groupName;
+	public int getId(){
+		return id;
 	}
-	public String getSchool(){
-		return school;
+	public String getTitle(){
+		return title;
 	}
 	public String getSubject(){
 		return subject;
 	}
-	public String getAddress(){
-		return address;
-	}
 	public String getDescription(){
 		return description;
 	}
-	public String getDate(){
-		return date;
+	public String getAddress(){
+		return address;
 	}
-	public String getTime(){
-		return time;
+	public String getAddressAddition(){
+		return addressAddition;
 	}
-	public String getCreatorID(){
-		return creatorID;
+	public String getDateTime(){
+		return dateTime;
+	}
+	public int getDuration(){
+		return duration;
+	}
+	public int getPeopleIn(){
+		return peopleIn;
+	}
+	public int getCheckIn(){
+		return checkIn;
+	}
+	public String getSchool(){
+		return school;
+	}
+	public String getCreatorId(){
+		return creatorId;
+	}
+	public String getCreatorName(){
+		return creatorName;
 	}
 
-	public void setGroupName(String groupName){
-		this.groupName = groupName;
+
+	public void setId(int id){
+		this.id = id;
 	}
-		
-	public void setSchool(String school){
-		this.school = school;
+	public void setTitle(String title){
+		this.title = title;
 	}
 	public void setSubject(String subject){
 		this.subject = subject;
 	}
-	public void setAddress(String address){
-		this.address = address;
-	}
 	public void setDescription(String description){
 		this.description = description;
 	}
-	public void setDate(String date){
-		this.date = date;
+	public void setAddress(String address){
+		this.address = address;
 	}
-	public void setTime(String time){
-		this.time = time;
+	public void setAddressAddition(String addressAddition){
+		this.addressAddition = addressAddition;
 	}
-	public void setCreatorID(String creatorID){
-		this.creatorID = creatorID;
+	public void setDateTime(String dateTime){
+		this.dateTime = dateTime;
 	}
+	public void setDuration(int duration){
+		this.duration = duration;
+	}
+	public void setPeopleIn(int peopleIn){
+		this.peopleIn = peopleIn;
+	}
+	public void getCheckIn(int checkIn){
+		this.checkIn = checkIn;
+	}
+	public void getSchool(String school){
+		this.school = school;
+	}
+	public void getCreatorId(String creatorId){
+		this.creatorId = creatorId;
+	}
+	public void getCreatorName(String creatorName){
+		this.creatorName = creatorName;
+	}
+
 }

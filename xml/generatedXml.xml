@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
-  <groupName>a</groupName>
-  <school>a</school>
-  <subject>a</subject>
-  <address>a</address>
-  <description>a</description>
-  <dateTime>a a</dateTime>
-  <creatorID>a</creatorID>
+  <subject>cse</subject>
+  <school>ucsd</school>
+  <address>gilman dr</address>
+  <description>computer science</description>
+  <dateTime>01/26/14 2:10AM</dateTime>
+  <creatorId>1</creatorId>
 </group>
