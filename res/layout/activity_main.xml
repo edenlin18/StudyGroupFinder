@@ -22,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="45dp"
         android:onClick="myGroupsTest"
-        android:text="My Groups Test" />
+        android:text="@string/my_groups_test" />
 
     <Button
         android:id="@+id/MAINbutton3"
@@ -32,7 +32,7 @@
         android:layout_alignLeft="@+id/MAINbutton1"
         android:layout_marginBottom="17dp"
         android:onClick="editGroupTest"
-        android:text="Edit Group Test" />
+        android:text="@string/edit_group_test" />
 
     <Button
         android:id="@+id/MAINbutton2"
@@ -42,7 +42,7 @@
         android:layout_alignLeft="@+id/MAINbutton3"
         android:layout_marginBottom="14dp"
         android:onClick="searchTest"
-        android:text="Search Test" />
+        android:text="@string/search_test" />
 
     <Button
         android:id="@+id/MAINbutton4"
@@ -52,7 +52,7 @@
         android:layout_below="@+id/MAINtextView1"
         android:layout_marginTop="30dp"
         android:onClick="connectTest"
-        android:text="Connect Test" />
+        android:text="@string/connect_test" />
 
     <Button
         android:id="@+id/MAINbutton5"
@@ -61,7 +61,7 @@
         android:layout_alignLeft="@+id/MAINbutton4"
         android:layout_below="@+id/MAINbutton4"
         android:layout_marginTop="23dp"
-        android:text="Search Results Test" 
-        android:onClick="searchResultsTest" />
+        android:onClick="searchResultsTest"
+        android:text="@string/search_results_test" />
 
 </RelativeLayout>

@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -26,10 +27,13 @@ public class EditGroupActivity extends Activity {
 
 	private TimePickerDialog timePickDialog = null;
 	private Spinner spinner;
-	private EditText txtView, txtView2;
+	private EditText startDate, startTime, description, address, subject;
+	private Spinner school;
+	private int groupId;
 	private String initialDate;
 	private String initialMonth;
 	private String initialYear;
+	private Button confirmButton;
 	private DatePickerDialog dialog = null;
 	Context context;
 
@@ -38,18 +42,51 @@ public class EditGroupActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_group);
-
+	/*
+		if( isCreator )
+		{
+			// read from xml or return values from alvin's function
+			startTime = (EditText) findViewById(R.id.StartTimeInput);
+			startTime.setText();
+			startDate = (EditText) findViewById(R.id.StartDateInput);
+			startDate.setText();
+			description = (EditText) findViewById(R.id.DescriptionInput);
+			description.setText();
+			address = (EditText) findViewById(R.id.AddressInput);
+			address.setText();
+			subject = (EditText) findViewById(R.id.SubjectInput);
+			subject.setText();
+			int index = 0;
+			String schoolCheck = ...;
+			String arr[] = getResources().getStringArray(R.array.school_arrays);
+			while( index < arr.length() )
+			{
+				if( schoolCheck == arr[ index ] )
+					break;
+				index++;
+			}
+			spinner.setSelection( index );
+		}
+		else
+		{
+			
+			confirmButton = (Button) findViewById(R.id.ConfirmButton);
+			confirmButton.setEnabled(false);
+			
+			startTime = (EditText) findViewById(R.id.StartTimeInput);
+			startDate = (EditText) findViewById(R.id.StartDateInput);
+		}
+*/
 	}
 
 	public void StartDate(View v) {
 		context = getApplicationContext();
-		txtView = (EditText) findViewById(R.id.StartDateInput);
-		txtView.setOnClickListener(new View.OnClickListener() {
+		startDate.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				Calendar dtTxt = null;
-				String preExistingDate = (String) txtView.getText().toString();
+				String preExistingDate = (String) startDate.getText().toString();
 				Log.d("Check date", preExistingDate);
 
 				if (preExistingDate != null && !preExistingDate.equals("")) {
@@ -95,7 +132,7 @@ public class EditGroupActivity extends Activity {
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
 				int dayOfMonth) {
 			view.updateDate(year, monthOfYear, dayOfMonth);
-			txtView.setText(monthOfYear + 1 + "/" + dayOfMonth + "/" + year);
+			startDate.setText(monthOfYear + 1 + "/" + dayOfMonth + "/" + year);
 			dialog.hide();
 		}
 
@@ -103,12 +140,11 @@ public class EditGroupActivity extends Activity {
 
 	public void StartTime(View v) {
 		context = getApplicationContext();
-		txtView2 = (EditText) findViewById(R.id.StartTimeInput);
-		txtView2.setOnClickListener(new View.OnClickListener() {
+		startTime.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				String time = txtView2.getText().toString();
+				String time = startTime.getText().toString();
 
 				if (time != null && !time.equals("")) {
 					StringTokenizer st = new StringTokenizer(time, ":");
@@ -152,7 +188,7 @@ public class EditGroupActivity extends Activity {
 			String strHrsToShow = (datetime.get(Calendar.HOUR) == 0) ? "12"
 					: datetime.get(Calendar.HOUR) + "";
 
-			txtView2.setText(strHrsToShow + ":" + minute + "  " + am_pm);
+			startTime.setText(strHrsToShow + ":" + minute + "  " + am_pm);
 			timePickDialog.hide();
 
 		}
@@ -162,6 +198,8 @@ public class EditGroupActivity extends Activity {
 	
 	public void confirm( View v )
 	{
+		
+		finish();
 	}
 
 
