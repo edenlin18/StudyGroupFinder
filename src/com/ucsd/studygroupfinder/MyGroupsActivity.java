@@ -6,6 +6,7 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,22 +25,8 @@ public class MyGroupsActivity extends ListActivity
 	   
 	   groups = new ArrayList<StudyGroup>();
 	   
-
-	   groups.add(new StudyGroup("CSE 1", false, 7));
-	   groups.add(new StudyGroup("CSE 2", false, 72));
-	   groups.add(new StudyGroup("CSE 3", false, 34));
-	   groups.add(new StudyGroup("CSE 40", false, 21));
-	   groups.add(new StudyGroup("CSE 105", true, 487));
-	   groups.add(new StudyGroup("CSE 1", false, 7));
-	   groups.add(new StudyGroup("CSE 2", false, 72));
-	   groups.add(new StudyGroup("CSE 3", false, 34));
-	   groups.add(new StudyGroup("CSE 40", false, 21));
-	   groups.add(new StudyGroup("CSE 105", true, 487));
-	   groups.add(new StudyGroup("CSE 1", false, 7));
-	   groups.add(new StudyGroup("CSE 2", false, 72));
-	   groups.add(new StudyGroup("CSE 3", false, 34));
-	   groups.add(new StudyGroup("CSE 40", false, 21));
-	   groups.add(new StudyGroup("CSE 105", true, 487));
+	   groups.add(new StudyGroup("CSE 105", "UCSD", "Price Center", "Fun Times!", "2014-01-20", "14:52:21", true, 1));
+	   groups.add(new StudyGroup("ECON 1", "UCLA", "Library", "Not good...", "2014-01-20", "14:52:21", false, 1));
 	   
 	   setListAdapter(new Adapter(MyGroupsActivity.this, R.layout.search_results_row, groups));
 	}
@@ -78,6 +65,9 @@ public class MyGroupsActivity extends ListActivity
 					else
 						isCreator.setText("Member");
 				}
+
+				TextView dateTime = (TextView) row.findViewById(R.id.RESULTdateTime);
+				dateTime.setText(item.getDate() + "       " + item.getTime());
 				
 				TextView count = (TextView) row.findViewById(R.id.RESULTcount);
 				count.setText(Integer.toString(item.getCount()));
@@ -89,6 +79,15 @@ public class MyGroupsActivity extends ListActivity
 	
 	public void editResult(View view)
 	{
+		String subject;
+		boolean isCreator;
+		int count;
+		
+		TextView subjectText = (TextView) view.findViewById(R.id.RESULTsubject);
+		subject = subjectText.getText().toString();
+		
+		Log.d("Subject Get", subject);
+		
 		Intent i = new Intent(this, EditGroupActivity.class);
 		startActivity(i);
 	}
