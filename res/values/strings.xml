@@ -26,7 +26,6 @@
     <string name="address">Address</string>
     <string name="choose_a_school">Choose A School</string>
     <string name="change_school">Change School</string>
-
     <string-array name="school_arrays">
         <item>UCSD</item>
         <item>UCLA</item>
