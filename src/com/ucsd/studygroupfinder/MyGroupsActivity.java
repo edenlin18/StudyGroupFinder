@@ -2,7 +2,6 @@ package com.ucsd.studygroupfinder;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -11,43 +10,81 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class MyGroupsActivity extends ListActivity 
 {
-	private List<String> list;
+	private ArrayList<StudyGroup> groups;
 	
-	public class Adapter extends ArrayAdapter<String> 
-	{
-		public Adapter(Context context, int textResource, List<String> objects) 
-		{
-			super(context, textResource, objects);
-		}
-		
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) 
-		{
-			LayoutInflater inflater=getLayoutInflater();
-			View row = inflater.inflate(R.layout.search_results_row, parent, false);
-			
-			return row;
-		}
-	}
-		
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
 	   super.onCreate(savedInstanceState);
 	   
-	   list = new ArrayList<String>();
+	   groups = new ArrayList<StudyGroup>();
 	   
-	   list.add("1");
-	   list.add("2");
-	   list.add("3");
+
+	   groups.add(new StudyGroup("CSE 1", false, 7));
+	   groups.add(new StudyGroup("CSE 2", false, 72));
+	   groups.add(new StudyGroup("CSE 3", false, 34));
+	   groups.add(new StudyGroup("CSE 40", false, 21));
+	   groups.add(new StudyGroup("CSE 105", true, 487));
+	   groups.add(new StudyGroup("CSE 1", false, 7));
+	   groups.add(new StudyGroup("CSE 2", false, 72));
+	   groups.add(new StudyGroup("CSE 3", false, 34));
+	   groups.add(new StudyGroup("CSE 40", false, 21));
+	   groups.add(new StudyGroup("CSE 105", true, 487));
+	   groups.add(new StudyGroup("CSE 1", false, 7));
+	   groups.add(new StudyGroup("CSE 2", false, 72));
+	   groups.add(new StudyGroup("CSE 3", false, 34));
+	   groups.add(new StudyGroup("CSE 40", false, 21));
+	   groups.add(new StudyGroup("CSE 105", true, 487));
 	   
-	   setListAdapter(new Adapter(MyGroupsActivity.this, R.layout.search_results_row, list));
+	   setListAdapter(new Adapter(MyGroupsActivity.this, R.layout.search_results_row, groups));
+	}
+	
+	public class Adapter extends ArrayAdapter<StudyGroup>
+	{
+		public Adapter(Context context, int textResource, List<StudyGroup> objects)
+		{
+			super(context, textResource, objects);
+		}
+		
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) 
+		{			
+			View row = convertView;
+			
+			if(row == null)
+			{	
+				LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+				row = inflater.inflate(R.layout.search_results_row, null);
+			}
+			
+			StudyGroup item = getItem(position);
+			
+			if(item != null)
+			{
+				TextView subject = (TextView) row.findViewById(R.id.RESULTsubject);
+				if(subject != null)
+					subject.setText(item.getSubject());
+				
+				TextView isCreator = (TextView) row.findViewById(R.id.RESULTisCreator);
+				if(isCreator != null)
+				{
+					if(item.getIsCreator() == true)
+						isCreator.setText("Creator");
+					else
+						isCreator.setText("Member");
+				}
+				
+				TextView count = (TextView) row.findViewById(R.id.RESULTcount);
+				count.setText(Integer.toString(item.getCount()));
+			}
+			
+			return row;
+		}
 	}
 	
 	public void editResult(View view)
