@@ -1,6 +1,8 @@
 package com.ucsd.studygroupfinder;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -50,8 +52,10 @@ public class SearchResultsActivity extends ListActivity
        
        client.start();
 	   
-	   
+       
 	   groups = new ArrayList<StudyGroup>();
+	   
+	   
 	   
 	   /*
 	   groups.add(new StudyGroup("CSE 105", "UCSD", "Price Center", "Fun Times!", "2014-01-20", "14:52:21", true, 1));
@@ -94,15 +98,14 @@ public class SearchResultsActivity extends ListActivity
 				
 				out.println(pass);
 				
-				/*
 				
-				List<Group> list;
+				
+				/*List<Group> list;
 				
 				XMLPullParserHandler hand = new XMLPullParserHandler();
 				
-				list = hand.parse( socket.getInputStream());
+				list = hand.parse( socket.getInputStream());*/ 
 				
-				*/
 			}
 			catch (UnknownHostException e) 
 			{
