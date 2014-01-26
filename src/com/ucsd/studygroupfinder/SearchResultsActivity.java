@@ -16,12 +16,15 @@ import android.widget.TextView;
 public class SearchResultsActivity extends ListActivity 
 {
 	private ArrayList<StudyGroup> groups;
+	private int number;
 	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
 	   super.onCreate(savedInstanceState);
+	   
+	   number = 0;
 	   
 	   groups = new ArrayList<StudyGroup>();
 	   
@@ -71,6 +74,15 @@ public class SearchResultsActivity extends ListActivity
 				
 				TextView count = (TextView) row.findViewById(R.id.RESULTcount);
 				count.setText(Integer.toString(item.getCount()));
+				
+				TextView data = (TextView) row.findViewById(R.id.RESULTdata);
+				data.setText(Integer.toString(number));
+				
+				Log.d("Pushed number", Integer.toString(number));
+				
+				number++;
+				
+				Log.d("Incremented number", Integer.toString(number));
 			}
 			
 			return row;

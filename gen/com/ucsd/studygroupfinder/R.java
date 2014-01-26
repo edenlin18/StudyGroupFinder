@@ -62,23 +62,36 @@ public final class R {
         public static final int MAINbutton5=0x7f090025;
         public static final int MAINtextView1=0x7f090020;
         public static final int MYGROUPlistView1=0x7f090026;
-        public static final int RESULTSlistView1=0x7f09002b;
-        public static final int RESULTcount=0x7f090032;
-        public static final int RESULTdate=0x7f090031;
-        public static final int RESULTisCreator=0x7f090030;
-        public static final int RESULTsubject=0x7f09002f;
-        public static final int SEARCHgroup=0x7f090027;
-        public static final int SEARCHlogout=0x7f090028;
-        public static final int SEARCHsearch=0x7f09002a;
-        public static final int SEARCHsearchfield=0x7f090029;
+        public static final int RESULTSlistView1=0x7f09002e;
+        public static final int RESULTcount=0x7f09003f;
+        public static final int RESULTdata=0x7f09003b;
+        public static final int RESULTdateTime=0x7f09003e;
+        public static final int RESULTisCreator=0x7f09003d;
+        public static final int RESULTsubject=0x7f09003c;
+        public static final int SEARCHchangeSchool=0x7f09002d;
+        public static final int SEARCHgroup=0x7f090028;
+        public static final int SEARCHlogout=0x7f090029;
+        public static final int SEARCHschool=0x7f09002c;
+        public static final int SEARCHsearch=0x7f09002b;
+        public static final int SEARCHsearchfield=0x7f09002a;
+        public static final int SIGNTemail=0x7f090030;
+        public static final int SIGNTpass=0x7f090032;
+        public static final int SIGNTphone=0x7f090036;
+        public static final int SIGNup=0x7f090037;
         public static final int SchoolInput=0x7f090009;
+        public static final int SignUpSchoolList=0x7f090034;
         public static final int StartDateInput=0x7f090019;
         public static final int StartTimeInput=0x7f09001d;
         public static final int SubjectInput=0x7f09000d;
-        public static final int action_settings=0x7f090033;
-        public static final int line1=0x7f09002e;
-        public static final int textView1=0x7f09002c;
-        public static final int textView2=0x7f09002d;
+        public static final int action_settings=0x7f090040;
+        public static final int line1=0x7f09003a;
+        public static final int tableLayout1=0x7f090027;
+        public static final int tableRow1=0x7f09002f;
+        public static final int tableRow2=0x7f090031;
+        public static final int tableRow3=0x7f090033;
+        public static final int tableRow4=0x7f090035;
+        public static final int textView1=0x7f090038;
+        public static final int textView2=0x7f090039;
     }
     public static final class layout {
         public static final int activity_edit_group=0x7f030000;
@@ -86,8 +99,9 @@ public final class R {
         public static final int activity_my_groups=0x7f030002;
         public static final int activity_search=0x7f030003;
         public static final int activity_search_results=0x7f030004;
-        public static final int my_groups_row=0x7f030005;
-        public static final int search_results_row=0x7f030006;
+        public static final int activity_sign_up=0x7f030005;
+        public static final int my_groups_row=0x7f030006;
+        public static final int search_results_row=0x7f030007;
     }
     public static final class menu {
         public static final int edit_group=0x7f080000;
@@ -95,16 +109,18 @@ public final class R {
         public static final int my_groups=0x7f080002;
         public static final int search=0x7f080003;
         public static final int search_results=0x7f080004;
+        public static final int sign_up=0x7f080005;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int address=0x7f050016;
         public static final int app_name=0x7f050000;
+        public static final int change_school=0x7f050018;
         public static final int choose_a_school=0x7f050017;
         public static final int connect_test=0x7f05000d;
         public static final int create_or_edit=0x7f050009;
         public static final int description=0x7f05000e;
-        public static final int edit_confirm=0x7f050018;
+        public static final int edit_confirm=0x7f050019;
         public static final int edit_group_test=0x7f05000f;
         public static final int group_name=0x7f050010;
         public static final int hello_world=0x7f050002;
@@ -122,6 +138,7 @@ public final class R {
         public static final int title_activity_my_groups=0x7f050003;
         public static final int title_activity_search=0x7f050004;
         public static final int title_activity_search_results=0x7f05000a;
+        public static final int title_activity_sign_up=0x7f05001a;
     }
     public static final class style {
         /** 

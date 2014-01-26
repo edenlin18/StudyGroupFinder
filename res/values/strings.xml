@@ -25,6 +25,7 @@
     <string name="school">School</string>
     <string name="address">Address</string>
     <string name="choose_a_school">Choose A School</string>
+    <string name="change_school">Change School</string>
 
     <string-array name="school_arrays">
         <item>UCSD</item>
@@ -36,6 +37,8 @@
         <item>USC</item>
         <item>UCR</item>
     </string-array>
+
     <string name="edit_confirm">Confirm</string>
+    <string name="title_activity_sign_up">Sign Up</string>
 
 </resources>

@@ -3,10 +3,13 @@ package com.ucsd.studygroupfinder;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.view.View;
 
 import java.util.Arrays;
@@ -30,6 +33,13 @@ public class Search extends Activity {
 		setContentView(R.layout.activity_search);
 
 		addListenerOnButton();
+		
+		TextView text = (TextView) findViewById(R.id.SEARCHchangeSchool);
+		
+		String changeSchool = "Change School";
+		SpannableString content = new SpannableString(changeSchool);
+		content.setSpan(new UnderlineSpan(), 0, changeSchool.length(), 0);
+		text.setText(content);
 	}
 
 	@Override
@@ -39,6 +49,16 @@ public class Search extends Activity {
 		return true;
 	}
 
+	public void changeSchool(View view)
+	{
+		TextView text = (TextView) findViewById(R.id.SEARCHchangeSchool);
+		
+		String changeSchool = "School Changed!";
+		SpannableString content = new SpannableString(changeSchool);
+		content.setSpan(new UnderlineSpan(), 0, changeSchool.length(), 0);
+		text.setText(content);
+	}
+	
 	public void addListenerOnButton() {
 		searchButton = (Button) findViewById(R.id.SEARCHsearch);
 		groupButton = (Button) findViewById(R.id.SEARCHgroup);

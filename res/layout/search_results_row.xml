@@ -10,14 +10,20 @@
 	android:onClick="editResult"
 	android:background="@android:drawable/list_selector_background"
 	>
-
+	
+    <TextView
+        android:id="@+id/RESULTdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+    
 	<TextView
 	    android:id="@+id/RESULTsubject"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true"
-	    android:text="SUBJECT"
 	    android:textSize="30dp" />
 
 	<TextView
@@ -27,22 +33,22 @@
 	    android:layout_alignParentRight="true"
 	    android:layout_alignParentTop="true"
 	    android:textColor="#999999"
-	    android:text="Creator" />
+	    />
 
 	<TextView
-	    android:id="@+id/RESULTdate"
+	    android:id="@+id/RESULTdateTime"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_below="@+id/RESULTsubject"
-	    android:text="Some date goes here" />
-
+	    />
+	
 	<TextView
 	    android:id="@+id/RESULTcount"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentBottom="true"
 	    android:layout_alignParentRight="true"
-	    android:text="# 47532" />
+	    />
 	
 </RelativeLayout>

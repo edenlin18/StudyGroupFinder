@@ -34,9 +34,9 @@ public class MainActivity extends Activity {
         return true;
     }
     
-    public void myGroupsTest(View view)
+    public void signUpTest(View view)
     {
-    	Intent i = new Intent(this, MyGroupsActivity.class);
+    	Intent i = new Intent(this, SignUpActivity.class);
     	startActivity(i);
 
     }

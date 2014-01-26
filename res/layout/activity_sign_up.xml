@@ -1,0 +1,84 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignUpActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/SIGNTemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:ems="15"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/SIGNTpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:ems="15"
+            android:hint="Password"
+            android:inputType="textPassword" >
+
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/SignUpSchoolList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/school_arrays"
+            android:gravity="center"
+            android:layout_marginTop="27dp"
+            android:prompt="@string/choose_a_school"
+            tools:listitem="@android:layout/simple_spinner_item" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/SIGNTphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:ems="15"
+            android:hint="Phone (Optional)"
+            android:inputType="phone" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/SIGNup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SIGNTphone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Sign Me Up" />
+
+</TableLayout>

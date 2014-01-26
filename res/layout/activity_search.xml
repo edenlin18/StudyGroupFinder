@@ -1,56 +1,91 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-   <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal" >
-        <Button
-            android:id="@+id/SEARCHgroup"
-            android:layout_weight="1"
-            android:background="#b0b0b0"
-            android:gravity="center"
-            android:onClick="myGroupsOnClick"
-            android:padding="18dip"
-            android:text="@string/my_group"
-            android:textColor="#000000"
-            android:textSize="12sp" />
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-        <Button
-            android:id="@+id/SEARCHlogout"
-            android:layout_weight="6"
-            android:background="#a09f9f"
-            android:gravity="center"
-            android:onClick="myGroupsOnClick"
-            android:padding="18dip"
-            android:text="@string/logout"
-            android:textColor="#000000"
-            android:textSize="12sp" />
-
-    </TableRow>
-
-    <TableRow android:layout_marginTop="20dip" >
-
-        <EditText
-            android:id="@+id/SEARCHsearchfield"
-            android:hint="Search for Course Number"
-            android:layout_weight="1" />
-        
-    </TableRow>
-
-    <TableRow
-        android:layout_marginTop="20dip"
-        android:gravity="center" >
-
-        <Button
-            android:id="@+id/SEARCHsearch"
-            android:layout_width="wrap_content"
+        <TableRow
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="mySearchOnClick"
-            android:text="@string/search"
-            android:textSize="12sp" />
-    </TableRow>
+            android:gravity="center_horizontal" >
 
-</TableLayout>
+            <Button
+                android:id="@+id/SEARCHgroup"
+                android:layout_weight="1"
+                android:background="#b0b0b0"
+                android:gravity="center"
+                android:onClick="myGroupsOnClick"
+                android:padding="18dip"
+                android:text="@string/my_group"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/SEARCHlogout"
+                android:layout_weight="6"
+                android:background="#a09f9f"
+                android:gravity="center"
+                android:onClick="myGroupsOnClick"
+                android:padding="18dip"
+                android:text="@string/logout"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dip" >
+
+            <EditText
+                android:id="@+id/SEARCHsearchfield"
+                android:layout_weight="1"
+                android:hint="Search for Course Number" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/SEARCHsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="mySearchOnClick"
+                android:text="@string/search"
+                android:textSize="12sp" />
+        </TableRow>
+
+    </TableLayout>
+    
+    <RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+
+	    <TextView
+	        android:id="@+id/SEARCHschool"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/SEARCHchangeSchool"
+	        android:layout_alignLeft="@+id/SEARCHchangeSchool"
+	        android:textSize="30dp" 
+	        android:text="UCSD" />
+    
+	    <TextView
+	        android:id="@+id/SEARCHchangeSchool"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginBottom="16dp"
+	        android:layout_marginLeft="18dp"
+	        android:onClick="changeSchool"
+	        android:clickable="true"
+	        android:text="@string/change_school" />
+
+	</RelativeLayout>
+
+</RelativeLayout>

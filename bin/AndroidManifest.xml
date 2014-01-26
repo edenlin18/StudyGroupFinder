@@ -38,6 +38,10 @@
             android:name="com.ucsd.studygroupfinder.SearchResultsActivity"
             android:label="@string/title_activity_search_results" >
         </activity>
+        <activity
+            android:name="com.ucsd.studygroupfinder.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
     </application>
 
 </manifest>
