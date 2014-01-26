@@ -32,9 +32,11 @@ public class XMLPullParserHandler {
             int eventType = parser.getEventType();
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 String tagname = parser.getName();
+                Log.d("Paser", tagname);
                 switch (eventType) {
                 case XmlPullParser.START_TAG:
                     if (tagname.equalsIgnoreCase("group")) {
+                    	
                         // create a new instance of group
                         group = new Group();
                     }

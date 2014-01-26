@@ -76,7 +76,7 @@ public class Search extends Activity {
 
 		String input = sEdit.getText().toString().toUpperCase();
 
-		Intent i = new Intent(this, MyGroupsActivity.class);
+		Intent i = new Intent(this, SearchResultsActivity.class);
 
 		if (input.contains("_"))
 			input = input.replace('_', ' ');

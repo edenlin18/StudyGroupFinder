@@ -10,6 +10,7 @@ import java.net.UnknownHostException;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
@@ -84,12 +85,17 @@ public class MainActivity extends Activity {
     	
     	public void run()
     	{
+    		Log.d("RUN()", "Running");
+    		
 			try
 			{
-				socket = new Socket("10.55.51.114", 2222);
+				Log.d("TRY()", "Tried");
+				
+				socket = new Socket("54.201.23.79", 1234);
 				out = new PrintWriter(socket.getOutputStream(),true);
 				in = new BufferedReader(
 						new InputStreamReader(socket.getInputStream()));
+				out.println("login");
 				String send = id + " " + password + " " + school;
 				out.println(send);
 				int code = Integer.parseInt(in.readLine());
@@ -97,11 +103,13 @@ public class MainActivity extends Activity {
 			}
 			catch (UnknownHostException e) 
 			{
+				Log.d("UNKNOWN HOST", "Who?");
 				//showError(CONNECTION_ERROR);
 				//finish();
 			} 
 			catch (IOException e) 
 			{
+				Log.d("IO EXCEPTION", "Bad IO");
 				//showError(CONNECTION_ERROR);
 				//finish();
 			}
