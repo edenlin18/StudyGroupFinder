@@ -54,5 +54,6 @@
     <string name="warning">WARNING</string>
     <string name="passwordEmpty">Password cannot be empty!</string>
     <string name="emailEmpty">Email cannot be empty!</string>
+    <string name="action_sign_up">Sign Up</string>
 
 </resources>

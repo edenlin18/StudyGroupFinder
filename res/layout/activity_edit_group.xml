@@ -4,231 +4,213 @@
     android:layout_height="fill_parent"
     tools:context=".EditGroupActivity" >
 
-    <RelativeLayout
+    <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
 
-        <TableLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:stretchColumns="*" >
+        <TableRow
+            android:id="@+id/EditTableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </TableRow>
+        <TextView
+            android:id="@+id/Greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/create_or_edit"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#999"
+            android:textSize="@dimen/activity_horizontal_margin" />
+
+        <TableRow
+            android:id="@+id/EditTableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/Greeting"
+                android:id="@+id/AskSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/create_or_edit"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#999"
-                android:textSize="@dimen/activity_horizontal_margin" />
+                android:text="@string/subject"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <TableRow
-                android:id="@+id/EditTableRow2"
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EditTableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/SubjectInput"
+                android:singleLine="true"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:ems="10" >
 
-                <TextView
-                    android:id="@+id/AskGroupName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/group_name"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+                <requestFocus />
+            </EditText>
 
-            <TableRow
-                android:id="@+id/EditTableRow3"
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EditTableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/AskSchool"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:text="@string/school"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
 
-                <EditText
-                    android:id="@+id/GroupNameInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" >
+        <TableRow
+            android:id="@+id/EditTableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-                    <requestFocus />
-                </EditText>
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/EditTableRow4"
+            <Spinner
+                android:id="@+id/SchoolInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:entries="@array/school_arrays"
+                android:gravity="center"
+                android:prompt="@string/choose_a_school"
+                tools:listitem="@android:layout/simple_spinner_item" />
+        </TableRow>
 
-                <TextView
-                    android:id="@+id/AskSchool"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/school"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+        <TableRow
+            android:id="@+id/EditTableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-            <TableRow
-                android:id="@+id/EditTableRow5"
+            <TextView
+                android:id="@+id/AskAddress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <Spinner
-                    android:id="@+id/SchoolInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/school_arrays"
-                    android:gravity="center"
-                    android:prompt="@string/choose_a_school"
-                    tools:listitem="@android:layout/simple_spinner_item" />
+        </TableRow>
 
-            </TableRow>
+        <TableRow
+            android:id="@+id/EditTableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-            <TableRow
-                android:id="@+id/EditTableRow6"
+            <EditText
+                android:id="@+id/AddressInput"
+                android:singleLine="false"
+                android:lines="3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
 
-                <TextView
-                    android:id="@+id/AskSubject"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/subject"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow7"
+        <TableRow
+            android:id="@+id/EditTableRow8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/AskDescription"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <EditText
-                    android:id="@+id/SubjectInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow8"
+        <TableRow
+            android:id="@+id/EditTableRow9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/DescriptionInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:ems="10" />
 
-                <TextView
-                    android:id="@+id/AskAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/address"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow9"
+        <TableRow
+            android:id="@+id/EditTableRow10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/AskStartDate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <EditText
-                    android:id="@+id/AddressInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPostalAddress" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow10"
+        <TableRow
+            android:id="@+id/EditTableRow11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/StartDateInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="false"
+                android:onClick="StartDate" />
 
-                <TextView
-                    android:id="@+id/AskDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow11"
+        <TableRow
+            android:id="@+id/EditTableRow12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/AskStartTime"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:text="@string/start_time"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <EditText
-                    android:id="@+id/DescriptionInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow12"
+        <TableRow
+            android:id="@+id/EditTableRow13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/StartTimeInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="false"
+                android:onClick="StartTime" />
 
-                <TextView
-                    android:id="@+id/AskStartDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/start_date"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
+        </TableRow>
 
-            <TableRow
-                android:id="@+id/EditTableRow13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+        <TableRow
+            android:id="@+id/EditTableRow14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/StartDateInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:onClick="StartDate" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/EditTableRow14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/AskStartTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/start_time"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/EditTableRow15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <EditText
-                    android:id="@+id/StartTimeInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:onClick="StartTime" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/EditTableRow16"
+            <Button
+                android:id="@+id/ConfirmButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:focusable="true" >
+                android:text="@string/edit_confirm" />
 
-                <Button
-                    android:id="@+id/Button01"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/edit_confirm" />
-            </TableRow>
-        </TableLayout>
-    </RelativeLayout>
+        </TableRow>
+    </TableLayout>
 
 </ScrollView>
