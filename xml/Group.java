@@ -5,7 +5,7 @@ public class Group{
 	private String school;
 	private String subject;
 	private String address;
-	private String description
+	private String description;
 	private String date;
 	private String time;
 	private String creatorID;
@@ -14,7 +14,7 @@ public class Group{
 
 	}
 
-	public Group(int groupName, String school, String subject, String address, String description, 
+	public Group(String groupName, String school, String subject, String address, String description, 
 		String date, String time, String creatorID ){
 		this.groupName = groupName;
 		this.school = school;
@@ -44,14 +44,14 @@ public class Group{
 	public String getDate(){
 		return date;
 	}
-	public int getTime(){
+	public String getTime(){
 		return time;
 	}
 	public String getCreatorID(){
-		return creatorId;
+		return creatorID;
 	}
 
-	public void setGroupName(int groupName){
+	public void setGroupName(String groupName){
 		this.groupName = groupName;
 	}
 		
@@ -70,7 +70,7 @@ public class Group{
 	public void setDate(String date){
 		this.date = date;
 	}
-	public void setTime(int time){
+	public void setTime(String time){
 		this.time = time;
 	}
 	public void setCreatorID(String creatorID){
