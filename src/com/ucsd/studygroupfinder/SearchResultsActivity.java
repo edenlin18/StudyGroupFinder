@@ -85,26 +85,28 @@ public class SearchResultsActivity extends ListActivity
 				socket = new Socket("54.201.23.79", 1234);
 				
 				out = new PrintWriter(socket.getOutputStream(),true);
-				in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				//in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				
 				out.println("search");
 				
 				String send = id + " " + password + " " + school;
 				out.println(send);
 				
-				int code = Integer.parseInt(in.readLine());
+				int code = (socket.getInputStream().read());
+				code = (socket.getInputStream().read());
 				
-				//Log.d("CODE", Integer.toString(code));
+				Log.d("CODE", Integer.toString(code));
 				
 				out.println(pass);
 				
-				
-				
-				/*List<Group> list;
+				List<Group> list;
 				
 				XMLPullParserHandler hand = new XMLPullParserHandler();
 				
-				list = hand.parse( socket.getInputStream());*/ 
+				list = hand.parse(socket.getInputStream() );
+				
+				Log.d("SOMETHING", Integer.toString(list.size()));
+				
 				
 			}
 			catch (UnknownHostException e) 
