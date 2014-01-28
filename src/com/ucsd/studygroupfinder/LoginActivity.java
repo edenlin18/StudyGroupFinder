@@ -3,6 +3,7 @@ package com.ucsd.studygroupfinder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,6 +17,8 @@ import com.ucsd.studygroupfinder.LoginActivity;
 import android.os.AsyncTask;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -34,6 +37,11 @@ public class LoginActivity extends Activity {
 
         private final static int EMAIL_EMPTY = 1;
         private final static int PASSWORD_EMPTY = 2;
+        
+        private SharedPreferences save;
+        
+        private String email;
+        private String password;
 
         private AlertDialog.Builder builder;
 
@@ -43,7 +51,16 @@ public class LoginActivity extends Activity {
 
                 builder = new AlertDialog.Builder(this);
                 setContentView(R.layout.activity_login);
-
+                
+                save = this.getSharedPreferences("Save", MODE_PRIVATE);
+                
+                email = save.getString("user", "");
+                if(email != "")
+                {
+                	//password = save.getString("password", "");
+                	//check();
+                	out();
+                }
         }
 
         @Override
@@ -60,21 +77,24 @@ public class LoginActivity extends Activity {
         private void login() {
                 EditText editEmail = (EditText) findViewById(R.id.editEmail);
                 EditText editPassword = (EditText) findViewById(R.id.editPassword);
-                String email = editEmail.getText().toString();
+                email = editEmail.getText().toString();
                 if (email == null || email.equals("")) {
                         showWarning(EMAIL_EMPTY);
                         return;
                 }
-                String password = editPassword.getText().toString();
+                password = editPassword.getText().toString();
                 if (password == null || password.equals("")) {
                         showWarning(PASSWORD_EMPTY);
                         return;
                 }
-
-                client = new ClientThread(email, password, "school");
-
-                client.start();
-
+                
+                check();
+        }
+        
+        private void check()
+        {
+            client = new ClientThread(email, password, "school");
+            client.start();
         }
 
         private void showToast(String message) {
@@ -106,9 +126,14 @@ public class LoginActivity extends Activity {
                                 out.println(send);
 
                                 int code = Integer.parseInt(in.readLine());
-                                if (code == 1) {
+                                if (code == 1)
+                                {
+                                	    saveData();
                                         out();
-
+                                }
+                                else
+                                {
+                                	removeData();
                                 }
 
                         } catch (UnknownHostException e) {
@@ -142,8 +167,27 @@ public class LoginActivity extends Activity {
                 }
                 builder.create().show();
         }
+        
+        public void saveData()
+        {
+            Editor editor = save.edit();
+            editor.putString("user", email);
+            editor.putString("password", password);
+            
+            editor.commit();
+        }
+        
+        public void removeData()
+        {
+            Editor editor = save.edit();
+            editor.putString("user", null);
+            editor.putString("password", null);
+            
+            editor.commit();
+        }
 
-        public void out() {
+        public void out() 
+        {
                 Intent i = new Intent(this, Search.class);
                 startActivity(i);
         }

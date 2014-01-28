@@ -24,6 +24,13 @@ public class XMLPullParserHandler {
     }
  
     public List<Group> parse(InputStream is) {
+    	/*
+    	try {
+			Log.d("STUFF", Integer.toString(is.read()));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}*/
         XmlPullParserFactory factory = null;
         XmlPullParser parser = null;
         try {
@@ -32,10 +39,20 @@ public class XMLPullParserHandler {
             parser = factory.newPullParser();
  
             parser.setInput(is, null);
- 
+            Log.d("ET", Integer.toString(is.read()));
+            Log.d("ET", Integer.toString(is.read()));
             int eventType = parser.getEventType();
+            //Log.d("ET", Integer.toString(is.read()));
+            //Log.d("ET", Integer.toString(is.read()));
+            //Log.d("ET", Integer.toString(is.read()));
+            
+            eventType = parser.getEventType();
+            Log.d("ET", Integer.toString(eventType));
+            
             while (eventType != XmlPullParser.END_DOCUMENT) {
+            	Log.d("DEPTH", Integer.toString(parser.getDepth()));
                 String tagname = parser.getName();
+                Log.d(tagname, tagname);
                 switch (eventType) {
                 case XmlPullParser.START_TAG:
                     if (tagname.equalsIgnoreCase("group")) {
@@ -46,6 +63,7 @@ public class XMLPullParserHandler {
  
                 case XmlPullParser.TEXT:
                     text = parser.getText();
+                	Log.d("TEST", text);
                     break;
  
                 case XmlPullParser.END_TAG:
